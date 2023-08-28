@@ -1,0 +1,10 @@
+﻿.idea
+projects/*/UserSettings
+projects/*/Library
+projects/*/Temp
+projects/*/*.csproj
+projects/*/*.sln
+projects/*/obj
+projects/*/Logs
+projects/**/build.log
+projects/**/stats.html
