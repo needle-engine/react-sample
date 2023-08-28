@@ -4,6 +4,7 @@
   "type" : "module",
   "scripts": {
     "start": "vite --host",
+	"build": "vite build",
     "build:dev": "vite build",
     "build:production": "npm run build:dev && npm run gltf:transform",
     "gltf:transform": "npm run transform --prefix node_modules/@needle-tools/gltf-build-pipeline"
