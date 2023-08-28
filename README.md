@@ -1,5 +1,6 @@
-# project-template
-🌵🪄 Project Template
+# Needle Engine React Sample
+
+Minimal starter project showing how to integrate Needle Engine into a react project.
 
 # Contact ✒️
 <b>[🌵 needle — tools for creators](https://needle.tools)</b> • 
