@@ -1,12 +1,16 @@
 {
   "needleEditor": null,
-  "meta": null,
+  "meta": {
+    "title": "Needle Engine",
+    "description": "🌵 Made with Needle Engine",
+    "image": ""
+  },
   "absolutePath": "https://localhost:3000",
   "sceneName": "React Sample",
   "deployOnly": false,
-  "generator": "Unity 2021.3.28f1, Needle Engine Integration @3.12.0-pre.2",
+  "generator": "Unity 2021.3.28f1, Needle Engine Integration @3.12.0-pre.3",
   "gzip": true,
   "allowHotReload": false,
-  "license": null,
+  "license": "pro",
   "useRapier": true
 }
