@@ -1,21 +1,24 @@
 import React, { useRef } from 'react'
 import { NeedleEngine } from './NeedleEngine';
 import { ContextRegistry, GameObject, Rigidbody } from '@needle-tools/engine';
-import * as THREE from 'three';
-import { randFloat } from 'three/src/math/MathUtils';
+import { Vector3 } from 'three';
+
+function randFloat(min: number, max: number) {
+  return Math.random() * (max - min) + min;
+}
 
 const App = () => {
 
   // Fetch rigidbodies from needle
-  var bodies: Rigidbody[] = []
+  const bodies: Rigidbody[] = []
   ContextRegistry.addContextCreatedCallback((_context) => {
-    bodies = GameObject.findObjectsOfType(Rigidbody);
+    bodies.push(...GameObject.findObjectsOfType(Rigidbody));
   })
 
-  const performJump = () => { 
-    const vec = new THREE.Vector3(0, 1, 0);
+  const performJump = () => {
+    const vec = new Vector3(0, 1, 0);
     bodies.forEach((body) => {
-      vec.set(randFloat(-1, 1), randFloat(0.5, 1), randFloat(-1, 1));
+      vec.set(0, randFloat(0.5, 5), 0);
       body.applyImpulse(vec);
     })
   };
