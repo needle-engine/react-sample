@@ -26,15 +26,15 @@ const App = () => {
   return (
     <>
       <div id="container" className="needle-container">
-        <NeedleEngine style={{position: "relative", display: "flex"}}>
-          <div style={{width: "100%", heigth: "100%"}}>
+        <NeedleEngine style={{ position: "relative", display: "flex" }}>
+          <div style={{ width: "100%", heigth: "100%" }}>
             <button type="button" onClick={performJump} className="jump-button">Squish!</button>
           </div>
         </NeedleEngine>
       </div>
-      <div style={{height: "30vh", display: "flex", justifyContent: "flex-start", alignItems: "center", flexDirection: "column"}}>
-        <h1 style={{width: "max(80%, 500px)", textAlign: "center"}}><a id="needle" href="https://needle.tools" target="_blank">Needle Engine</a> in <a id="react" href="https://github.com/needle-engine/react-sample" target="_blank">React</a></h1>  
-        <h2 style={{width: "min(80%, 800px)", textAlign: "center"}}>The canvas can be transparent allowing for a seamless experience.<br/>That's done by setting the camera's "Clear mode" to "Don't Clear".</h2>
+      <div style={{ height: "30vh", display: "flex", justifyContent: "flex-start", alignItems: "center", flexDirection: "column" }}>
+        <h1 style={{ width: "max(80%, 500px)", textAlign: "center" }}><a id="needle" href="https://needle.tools" target="_blank">Needle Engine</a> in <a id="react" href="https://github.com/needle-engine/react-sample" target="_blank">React</a></h1>
+        <h2 style={{ width: "min(80%, 800px)", textAlign: "center" }}>The canvas can be transparent allowing for a seamless experience.<br />That's done by setting the camera's "Clear mode" to "Don't Clear".</h2>
       </div>
     </>
   );
