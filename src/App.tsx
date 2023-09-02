@@ -26,7 +26,7 @@ const App = () => {
   return (
     <>
       <div id="container" className="needle-container">
-        <NeedleEngine style={{ position: "relative", display: "flex" }}>
+        <NeedleEngine style={{ position: "relative", display: "flex" }} loading-style="light">
           <div style={{ width: "100%", heigth: "100%" }}>
             <button type="button" onClick={performJump} className="jump-button">Squish!</button>
           </div>
