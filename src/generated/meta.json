@@ -8,9 +8,9 @@
   "absolutePath": "https://localhost:3000",
   "sceneName": "React Sample",
   "deployOnly": false,
-  "generator": "Unity 2021.3.28f1, Needle Engine Integration @3.12.0-pre.3",
+  "generator": "Unity 2021.3.28f1, Needle Engine Integration @3.16.2-pre",
   "gzip": true,
   "allowHotReload": false,
-  "license": "pro",
-  "useRapier": true
+  "useRapier": true,
+  "license": "pro"
 }
