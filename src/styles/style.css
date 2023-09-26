@@ -57,30 +57,6 @@ div {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-
-	box-shadow:inset 0px 0px 0px 0px #ffffff;
-	background-color:#ffffff;
-	border-radius:30px;
-	border:3px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#6d6d6d;
-	font-family:Arial;
-	font-size:1.7em;
-	padding:22px 38px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-
-    transition: all .1s ease;
-}
-.jump-button:hover {
-	background-color:#f1f1f1;
-    font-size: 1.6em;
-}
-.jump-button:active {
-	position:absolute;
-	bottom:15px;
-    font-size: 1.9em;
 }
 
 #needle {
