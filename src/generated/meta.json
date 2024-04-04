@@ -1,16 +1,18 @@
 {
   "needleEditor": null,
   "meta": {
-    "title": "Needle Engine",
-    "description": "🌵 Made with Needle Engine",
-    "image": ""
+    "title": "React Sample",
+    "description": "Integrate Needle Engine into a react component",
+    "image": "include/ReactSample.jpg"
   },
   "absolutePath": "https://localhost:3000",
   "sceneName": "React Sample",
   "deployOnly": false,
-  "generator": "Unity 2021.3.28f1, Needle Engine Integration @3.16.2-pre",
+  "generator": "Unity 2021.3.33f1, Needle Engine Integration @3.36.2-pre",
   "gzip": true,
   "allowHotReload": false,
+  "developmentBuild": false,
+  "facebookInstantGames": null,
   "useRapier": true,
   "license": "pro"
 }
