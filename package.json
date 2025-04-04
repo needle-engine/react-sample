@@ -6,12 +6,11 @@
     "start": "vite --host",
 	"build": "vite build",
     "build:dev": "vite build",
-    "build:production": "npm run build:dev && npm run gltf:transform",
-    "gltf:transform": "npm run transform --prefix node_modules/@needle-tools/gltf-build-pipeline"
+    "build:production": "vite build -- --production"
   },
   "dependencies": {
-	  "@needle-tools/engine": "^3.36.2-beta",
-	  "three": "npm:@needle-tools/three@^0.162.2",
+	  "@needle-tools/engine": "^4.4.0-beta.3",
+	  "three": "npm:@needle-tools/three@^0.169.0",
 	  "react": "^18.0.0",
 	  "react-dom": "^18.0.0"
 	},
