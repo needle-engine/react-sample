@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { NeedleEngine } from './NeedleEngine';
-import { ContextRegistry, GameObject, Rigidbody } from '@needle-tools/engine';
+import { GameObject, onStart, Rigidbody } from '@needle-tools/engine';
 import { Vector3 } from 'three';
 
 function randFloat(min: number, max: number) {
@@ -10,8 +10,8 @@ function randFloat(min: number, max: number) {
 const App = () => {
 
   // Fetch rigidbodies from needle
-  const bodies: Rigidbody[] = []
-  ContextRegistry.addContextCreatedCallback((_context) => {
+  const bodies: Rigidbody[] = [];
+  onStart(_context => {
     bodies.push(...GameObject.findObjectsOfType(Rigidbody));
   })
 
@@ -25,6 +25,13 @@ const App = () => {
 
   return (
     <>
+      <div className="top">
+        <h1>
+          <a id="needle" href="https://needle.tools" target="_blank">Needle Engine</a>
+          in
+          <a id="react" href="https://github.com/needle-engine/react-sample" target="_blank">React</a>
+        </h1>
+      </div>
       <div id="container" className="needle-container">
         <NeedleEngine style={{ position: "relative", display: "flex" }} loading-style="light">
           <div style={{ width: "100%", heigth: "100%" }}>
@@ -32,9 +39,10 @@ const App = () => {
           </div>
         </NeedleEngine>
       </div>
-      <div style={{ height: "30vh", display: "flex", justifyContent: "flex-start", alignItems: "center", flexDirection: "column" }}>
-        <h1 style={{ width: "max(80%, 500px)", textAlign: "center" }}><a id="needle" href="https://needle.tools" target="_blank">Needle Engine</a> in <a id="react" href="https://github.com/needle-engine/react-sample" target="_blank">React</a></h1>
-        <h2 style={{ width: "min(80%, 800px)", textAlign: "center" }}>The canvas can be transparent allowing for a seamless experience.<br />That's done by setting the camera's "Clear mode" to "Don't Clear".</h2>
+      <div className="bottom">
+          The canvas can be transparent allowing for a seamless experience.
+          <br />
+          Visit <a href="https://needle.tools" target="_blank">needle.tools</a> for more information.
       </div>
     </>
   );
