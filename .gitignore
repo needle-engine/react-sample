@@ -8,3 +8,4 @@ include/console/
 include/three-mesh-ui-assets/
 include/fonts/
 build.log
+.DS_Store
