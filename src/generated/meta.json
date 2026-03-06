@@ -1,5 +1,4 @@
 {
-  "needleEditor": null,
   "meta": {
     "title": "React Sample",
     "description": "Integrate Needle Engine into a react component",
@@ -7,12 +6,5 @@
   },
   "absolutePath": "https://localhost:3000",
   "sceneName": "React Sample",
-  "deployOnly": false,
-  "generator": "Unity 2021.3.33f1, Needle Engine Integration @3.36.2-pre",
-  "gzip": true,
-  "allowHotReload": false,
-  "developmentBuild": false,
-  "facebookInstantGames": null,
-  "useRapier": true,
   "license": "pro"
 }

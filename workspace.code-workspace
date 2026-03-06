@@ -16,6 +16,9 @@
       "**/.DS_Store": true,
       "**/node_modules": true
     },
-    "window.title": "react-sample"
+    "window.title": "react-sample",
+    "html.customData": [
+      "./custom-elements.json"
+    ]
   }
 }

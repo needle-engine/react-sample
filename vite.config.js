@@ -12,7 +12,6 @@ export default defineConfig(async (command) => {
 
     return {
         base: "./",
-        assetsInclude: ['*'],
         plugins: [
             react(),
             basicSsl(),
