@@ -11,7 +11,7 @@
     "deploy": "npm run build && npx --yes needle-cloud deploy dist --token"
   },
   "dependencies": {
-    "@needle-tools/engine": "^4.16.0",
+    "@needle-tools/engine": "4.16.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "npm:@needle-tools/three@^0.169.19"
