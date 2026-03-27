@@ -9,11 +9,8 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     font-family: 'Roboto', sans-serif;
-    background: #e0eefd;
-    background-image: linear-gradient(to right top, #6ee2ff, #88d5f6, #9cc8e8, #a8bcd6, #adb2c2, #a5a7b9, #9e9caf, #9791a5, #8c80a2, #836e9d, #7c5c97, #754990);
+    background: #555;
     overflow: hidden;
     color: black;
 }
@@ -26,30 +23,18 @@ a {
     color: inherit;
 }
 
-#main {
-    background-color: black;
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    user-select: none;
-}
-
 .needle-container {
-    height: calc(100vh - 6rem);
+    position: relative;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.jump-button {
+.xrbutton {
     position: absolute;
-    bottom: 120px;
     left: 50%;
+    bottom: 15%;
     transform: translateX(-50%);
 
     box-shadow: inset 0px 0px 0px 0px #ffffff;
@@ -59,50 +44,48 @@ a {
     border: 1px solid rgba(255, 255, 255, .3);
     display: inline-block;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 
     transition: all .1s ease;
     padding: .2em .8em;
 }
 
-.jump-button:hover {
+.xrbutton:hover {
     background-color: #f1f1f1;
     font-size: 1.9em;
 }
 
-.jump-button:active {
+.xrbutton:active {
     font-size: 1.5em;
 }
 
 .top {
     position: absolute;
     top: 2em;
-    font-size: 1.7rem;
+    font-size: 1.3em;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: rgba(255, 255, 255, .8);
+    z-index: 1000;
 
     & a {
         text-decoration: none;
     }
+
     & h1 {
+        font-size: 2em;
+
         display: flex;
-        gap: .5ch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 .3em;
     }
 }
-
-.bottom {
-    position: absolute;
-    width: 100%;
-    color: rgba(0, 0, 0, .8);
-    text-align: center;
-    bottom: 2rem;
-    line-height: 1.5em;;
-} 
 
 /* #needle {
     background: linear-gradient(to right top, rgb(9, 19, 13), rgb(240, 247, 96));

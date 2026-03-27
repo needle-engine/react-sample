@@ -1,27 +1,28 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { NeedleEngine } from './NeedleEngine';
-import { GameObject, onStart, Rigidbody } from '@needle-tools/engine';
-import { Vector3 } from 'three';
+import { NeedleXRSession, onStart, WebXR } from '@needle-tools/engine';
 
-function randFloat(min: number, max: number) {
-  return Math.random() * (max - min) + min;
-}
 
 const App = () => {
 
-  // Fetch rigidbodies from needle
-  const bodies: Rigidbody[] = [];
-  onStart(_context => {
-    bodies.push(...GameObject.findObjectsOfType(Rigidbody));
-  })
-
-  const performJump = () => {
-    const vec = new Vector3(0, 1, 0);
-    bodies.forEach((body) => {
-      vec.set(0, randFloat(0.5, 5), 0);
-      body.applyImpulse(vec);
+  const startWebXR = () => {
+    return onStart(ctx => {
+      const webxr = ctx.scene.getOrAddComponent(WebXR);
+      webxr.autoPlace = false; // disable auto placement, we want the user to tap to place the scene
+      webxr.usePlacementReticle = true; // show the placement reticle to help the user find surfaces to place the scene
+      webxr.usePlacementAdjustment = true; // allow the user to adjust the position, rotation and scale of the scene with touch after placing
+      webxr.arScale = 5; // scale of the user in AR (larger values make the scene smaller in AR)
+      webxr.enterAR(); // start AR session
     })
   };
+
+  const clickButton = () => {
+    const session = NeedleXRSession.active;
+    if (session) {
+      const newScale = Math.random() * 2 + 0.5;
+      session.rig?.gameObject.scale.set(newScale, newScale, newScale);
+    }
+  }
 
   return (
     <>
@@ -34,15 +35,11 @@ const App = () => {
       </div>
       <div id="container" className="needle-container">
         <NeedleEngine style={{ position: "relative", display: "flex" }} loading-style="light">
-          <div style={{ width: "100%", heigth: "100%" }}>
-            <button type="button" onClick={performJump} className="jump-button">Squish!</button>
-          </div>
+          <button className="desktop xrbutton" type="button" onClick={startWebXR} >
+            Start WebXR
+          </button>
+          <h2 className="ar xrbutton" onClick={clickButton}>Hello AR</h2>
         </NeedleEngine>
-      </div>
-      <div className="bottom">
-          The canvas can be transparent allowing for a seamless experience.
-          <br />
-          Visit <a href="https://needle.tools" target="_blank">needle.tools</a> for more information.
       </div>
     </>
   );
