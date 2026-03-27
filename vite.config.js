@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite';
-import viteCompression from 'vite-plugin-compression';
 import react from '@vitejs/plugin-react'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 
-const isCIEnvironment = process.env.CI !== undefined;
-
 export default defineConfig(async (command) => {
 
-    const { needlePlugins, useGzip, loadConfig } = await import("@needle-tools/engine/plugins/vite/index.js");
+    const { needlePlugins, useGzip, loadConfig } = await import("@needle-tools/engine/vite");
     const needleConfig = await loadConfig();
 
     return {
@@ -15,7 +12,6 @@ export default defineConfig(async (command) => {
         plugins: [
             react(),
             basicSsl(),
-            useGzip(needleConfig) && !isCIEnvironment ? viteCompression({ deleteOriginFile: true }) : null,
             needlePlugins(command, needleConfig),
         ],
         server: {

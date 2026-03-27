@@ -14,17 +14,16 @@
     "@needle-tools/engine": "^4.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "three": "npm:@needle-tools/three@^0.169.19"
+    "three": "npm:@needle-tools/three@0.169.19"
   },
   "devDependencies": {
-    "@needle-tools/helper": "^1.11.5",
+    "@needle-tools/helper": "2.0.0-next.faf57e6",
     "@types/three": "0.169.0",
-    "@vitejs/plugin-basic-ssl": "^1.1.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-basic-ssl": "2",
+    "@vitejs/plugin-react": "6.0.1",
     "ansi-styles": "^6.1.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "typescript": "^5.0.4",
-    "vite": "^6.0.0",
-    "vite-plugin-compression": "^0.5.1"
+    "vite": "8.0.3"
   }
 }
